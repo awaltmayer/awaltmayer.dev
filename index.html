@@ -3,164 +3,323 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Augusto Wolfart Altmayer</title>
-
+  <title>Augusto Wolfart Altmayer — Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-<nav>
-  <a href="#hero" class="nav-logo">awaltmayer.dev</a>
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <span class="logo-bracket">[</span>awaltmayer<span class="logo-accent">.</span>dev<span class="logo-bracket">]</span>
+  </a>
 
   <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#experiencia">Experiência</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#Habilidades">Habilidades</a></li>
-    <li><a href="#certificados">Certificados</a></li>
-    <li><a href="#contato">Contato</a></li>
+    <li><a href="#sobre" data-section="sobre">Sobre</a></li>
+    <li><a href="#experiencia" data-section="experiencia">Experiência</a></li>
+    <li><a href="#projetos" data-section="projetos">Projetos</a></li>
+    <li><a href="#habilidades" data-section="habilidades">Habilidades</a></li>
+    <li><a href="#certificados" data-section="certificados">Certificados</a></li>
+    <li><a href="#contato" data-section="contato">Contato</a></li>
   </ul>
 
   <a href="mailto:augustowolfartaltmayer30@gmail.com" class="nav-cta">
-    Contatos
+    <span>Contato</span>
   </a>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema"></button>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<section id="hero">
-  <div class="hero-content">
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre" class="mobile-link">Sobre</a>
+  <a href="#experiencia" class="mobile-link">Experiência</a>
+  <a href="#projetos" class="mobile-link">Projetos</a>
+  <a href="#habilidades" class="mobile-link">Habilidades</a>
+  <a href="#certificados" class="mobile-link">Certificados</a>
+  <a href="#contato" class="mobile-link">Contato</a>
+</div>
 
-    <div class="hero-text">
-      <h1>Augusto <span>Wolfart Altmayer</span></h1>
-      <p>
-        Olá, meu nome é Augusto e uso awaltmayer como apelido nas redes sociais. Sou estudante da Ciência da Porgramação. Este é o meu site pessoal, onde apresento mais sobre minha vida, capacitações e experiências. 
+<section id="hero">
+  <div class="hero-grid">
+
+    <div class="hero-text fade-up">
+      <h1>Augusto<br><span class="hero-name-accent">Wolfart</span><br>Altmayer</h1>
+      <p class="hero-desc">
+        Olá, me chamo Augusto, seja bem-vindo ao meu portfólio.
+        Estou cursando Ciencias da Computação e quero trabalhar com Java.
       </p>
-    <div class="hero-image">
-      <img src="assets/img/perfil.jpg" alt="Foto de Augusto" />
+      </div>
     </div>
 
+    <div class="hero-image-wrap fade-up delay-1">
+      <div class="hero-image-frame">
+        <img src="assets/img/perfil.jpg" alt="Foto de Augusto" />
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
 <section id="sobre">
-  <div class="sobre-container">
+  <div class="section-inner">
 
-    <div class="sobre-texto">
-      <h2>Sobre mim</h2>
-
-      <p>
-        Sou estudante de Computação no terceiro semestre, com objetivo de trabalhar com sistemas de segurança.
-      </p>
-
-      <p>
-        Tenho experiência Python, Unity e Java. Estou aprendendo agora HTML, CSS e JavaScript.
-      </p>
-      <p>
-        Meu interesse por tecnologia começou com curiosidade em entender como sistemas funcionam, atrelado a facilidade que tinha em entender a lógica dos sistemas. 
-      </p>
-
-      <p>
-        Hoje, busco uma oportunidade de estágio na área.
-      </p>
+    <div class="sobre-img fade-left">
+      <img src="assets/img/crianca.jpg" alt="Augusto criança" />
     </div>
-    <div
-      class="sobre-imagem">
-        <img src="assets/img/crianca.jpg" alt="Foto do Augusto criança" />
+
+    <div class="sobre-texto fade-right">
+      <div class="section-tag">// sobre mim</div>
+      <h2>Quem sou eu</h2>
+
+      <p>
+        Estudo Computação no terceiro semestre, com objetivo de trabalhar com
+        <strong>Java</strong>. Meu interesse por tecnologia
+        começou com a curiosidade de entender como sistemas funcionam,
+        atrelado à facilidade que sempre tive com lógica.
+      </p>
+
+      <p>
+        Tenho experiência com <strong>Python, Unity e Java</strong>.
+        Atualmente aprendendo <strong>HTML, CSS e JavaScript</strong> na prática,
+        construindo este portfólio como exercício real.
+      </p>
+
+      <p>
+        Busco uma <strong>oportunidade de estágio</strong> onde possa
+        contribuir e crescer junto com um time de tecnologia.
+      </p>
+
+      <div class="sobre-stats">
+        <div class="stat">
+          <span class="stat-num">2+</span>
+          <span class="stat-label">anos de experiência administrativa</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">semestres de faculdade</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">projetos publicados</span>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
 <section id="experiencia">
-  <div class="exp-container">
+  <div class="section-inner column">
+    <div class="section-tag fade-up">// experiência</div>
+    <h2 class="fade-up">Trajetória</h2>
 
-    <h2>Experiência</h2>
+    <div class="timeline">
 
-    <div class="exp-item">
-      <div class="exp-header">
-        <span class="exp-data">2024 - Atual</span>
-        <h3>Assistente Administrativo - Cotrijal</h3>
+      <div class="timeline-item fade-up">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-meta">
+            <span class="timeline-date">2024 — Atual</span>
+            <div class="timeline-company-logo">
+              <img src="assets/img/cotrijal-logo.png" alt="Cotrijal" />
+            </div>
+          </div>
+          <h3>Assistente Administrativo</h3>
+          <p>
+            Responsável por prestar suporte às atividades operacionais e
+            administrativas do centro de distribuição. Atua no controle de
+            documentos, organização de informações, atendimento a fornecedores
+            e transportadoras, garantindo a fluidez dos processos logísticos.
+          </p>
+          <div class="timeline-tags">
+            <span>Logística</span>
+            <span>Documentação</span>
+            <span>Atendimento</span>
+          </div>
+        </div>
       </div>
-      <p>
-        Responsável por prestar suporte às atividades operacionais e administrativas do centro de distribuição, garantindo a fluidez dos processos logísticos e o cumprimento dos prazos e procedimentos internos. Atua diretamente no controle de documentos, organização de informações, atendimento a fornecedores e transportadoras, e apoio à equipe de operações.
-      </p>
-    </div>
-    <div class="exp-item">
-      <div class="exp-header">
-        <span class="exp-data">2023 - 2024</span>
-        <h3>Assistente Administrativo (Aprendiz) - Cotrijal</h3>
-      </div>
-      <p>
-        Atuei como Aprendiz Assistente Administrativo, onde desenvolvi uma base sólida em conceitos de trabalho em equipe e cooperação. Durante esse período, fui responsável por apoiar as rotinas do setor, sempre priorizando o cumprimento das normas e regras organizacionais e a ética profissional. Adquiri experiência em organização de processos, suporte administrativo e atendimento, consolidando uma postura proativa e focada na cultura colaborativa da organização."
 
-      </p>
+      <div class="timeline-item fade-up delay-1">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-meta">
+            <span class="timeline-date">2023 — 2024</span>
+            <div class="timeline-company-logo">
+              <img src="assets/img/cotrijal-logo.png" alt="Cotrijal" />
+            </div>
+          </div>
+          <h3>Assistente Administrativo (Aprendiz)</h3>
+          <p>
+            Desenvolvi base sólida em trabalho em equipe e cooperação.
+            Responsável por apoiar rotinas do setor, priorizando cumprimento
+            das normas organizacionais e ética profissional. Consolidei
+            postura proativa dentro da cultura colaborativa da organização.
+          </p>
+          <div class="timeline-tags">
+            <span>Organização</span>
+            <span>Suporte</span>
+            <span>Ética profissional</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section id="projetos">
-  <div class="proj-container">
-
-    <h2>Projetos</h2>
-
-    <div class="proj-grid">
-
-      <div class="proj-card">
-        <img src="assets/img/alarme.png" alt="Projeto 1">
-
-        <div class="proj-info">
-          <h3>Sistema de Alarme</h3>
-          <p>
-            Sistema de alarme utilizando a Raspberry PI juntamente com sensores. 
-            Criado para simular o monitoramento de uma propriedade.
-          </p>
-
-          <div class="proj-tech">
-            <span>C++</span>
-            <span>Arduíno</span>
-            <span>RabbitMQ</span>
-          </div>
-
-          <div class="proj-links">
-            <a href="https://github.com/awaltmayer/sistema-de-alarme.git" target="_blank">
-              Repositório do Github
-            </a>
-          </div>
-        </div>
+  <div class="section-inner column">
+    <div class="section-tag fade-up">// projetos</div>
+    <div class="proj-header fade-up">
+      <h2>O que já construí</h2>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn" aria-label="Anterior">←</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="nextBtn" aria-label="Próximo">→</button>
       </div>
-
-      <div class="proj-card">
-        <img src="assets/img/tetrizos.jpg" alt="Projeto 2">
-
-        <div class="proj-info">
-          <h3>Jogo Tetrizos</h3>
-          <p>
-            Jogo criado com a biblioteca Pygame recriando o Tetris.
-            Meu primeiro contato com a criação de games. 
-          </p>
-
-          <div class="proj-tech">
-            <span>Python</span>
-            <span>Pygame</span>
-            <span>Tetris</span>
-          </div>
-
-            <div class="proj-links">
-            <a href="https://github.com/awaltmayer/Tetris-em-Pygame.git" target="_blank">
-              Repositório do Github
-            </a>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="carousel-viewport fade-up">
+      <div class="carousel-track" id="carouselTrack">
+
+        <div class="proj-slide">
+          <div class="proj-slide-img">
+            <img src="assets/img/alarme.png" alt="Sistema de Alarme" />
+            <div class="proj-slide-num">01 / <span class="proj-total"></span></div>
+          </div>
+          <div class="proj-slide-body">
+            <div class="proj-slide-tag">Hardware · IoT</div>
+            <h3>Sistema de Alarme</h3>
+            <p>Sistema de alarme com Raspberry Pi e sensores para simular o monitoramento de uma propriedade em tempo real. Arquitetura de mensageria com RabbitMQ para comunicação entre módulos.</p>
+            <div class="proj-tech">
+              <span>C++</span>
+              <span>Arduino</span>
+              <span>RabbitMQ</span>
+              <span>Raspberry Pi</span>
+            </div>
+            <div class="proj-slide-links">
+              <a href="https://github.com/awaltmayer/sistema-de-alarme.git" target="_blank" class="proj-btn-link">
+                Ver no GitHub ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJETO 02 -->
+        <div class="proj-slide">
+          <div class="proj-slide-img">
+            <img src="assets/img/tetrizos.jpg" alt="Tetrizos" />
+            <div class="proj-slide-num">02 / <span class="proj-total"></span></div>
+          </div>
+          <div class="proj-slide-body">
+            <div class="proj-slide-tag">Game Dev</div>
+            <h3>Tetrizos</h3>
+            <p>Recriação do Tetris clássico com Pygame. Primeiro contato com desenvolvimento de games, lógica de colisão e gerenciamento de estado de jogo.</p>
+            <div class="proj-tech">
+              <span>Python</span>
+              <span>Pygame</span>
+            </div>
+            <div class="proj-slide-links">
+              <a href="https://github.com/awaltmayer/Tetris-em-Pygame.git" target="_blank" class="proj-btn-link">
+                Ver no GitHub ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-slide proj-placeholder">
+          <div class="proj-slide-img placeholder-img">
+            <div class="placeholder-icon">{ }</div>
+            <div class="proj-slide-num">03 / <span class="proj-total"></span></div>
+          </div>
+          <div class="proj-slide-body">
+            <div class="proj-slide-tag">CATEGORIA</div>
+            <h3>NOME_PROJETO_3</h3>
+            <p>DESCRIÇÃO_DO_PROJETO_3</p>
+            <div class="proj-tech">
+              <span>TECH_1</span>
+              <span>TECH_2</span>
+            </div>
+            <div class="proj-slide-links">
+              <a href="#" class="proj-btn-link">Ver no GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-slide proj-placeholder">
+          <div class="proj-slide-img placeholder-img">
+            <div class="placeholder-icon">{ }</div>
+            <div class="proj-slide-num">04 / <span class="proj-total"></span></div>
+          </div>
+          <div class="proj-slide-body">
+            <div class="proj-slide-tag">CATEGORIA</div>
+            <h3>NOME_PROJETO_4</h3>
+            <p>DESCRIÇÃO_DO_PROJETO_4</p>
+            <div class="proj-tech">
+              <span>TECH_1</span>
+              <span>TECH_2</span>
+            </div>
+            <div class="proj-slide-links">
+              <a href="#" class="proj-btn-link">Ver no GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-slide proj-placeholder">
+          <div class="proj-slide-img placeholder-img">
+            <div class="placeholder-icon">{ }</div>
+            <div class="proj-slide-num">05 / <span class="proj-total"></span></div>
+          </div>
+          <div class="proj-slide-body">
+            <div class="proj-slide-tag">CATEGORIA</div>
+            <h3>NOME_PROJETO_5</h3>
+            <p>DESCRIÇÃO_DO_PROJETO_5</p>
+            <div class="proj-tech">
+              <span>TECH_1</span>
+              <span>TECH_2</span>
+            </div>
+            <div class="proj-slide-links">
+              <a href="#" class="proj-btn-link">Ver no GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section id="Habilidades">
-  <div class="Habilidades-container">
-     <h2>Habilidades</h2>
+<section id="habilidades">
+  <div class="section-inner column">
+    <div class="section-tag fade-up">// habilidades</div>
+    <h2 class="fade-up">Stack & Ferramentas</h2>
 
     <div class="skills-grid">
-      <div class="skill-card">
+
+      <div class="skill-card fade-up">
+        <div class="skill-icon">⟨/⟩</div>
         <h3>Front-end</h3>
         <div class="skill-list">
           <span>HTML</span>
@@ -169,29 +328,35 @@
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card fade-up delay-1">
+        <div class="skill-icon">{ }</div>
         <h3>Back-end</h3>
         <div class="skill-list">
           <span>Java</span>
           <span>Python</span>
+          <span>C++</span>
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card fade-up delay-2">
+        <div class="skill-icon">⚙</div>
         <h3>Ferramentas</h3>
         <div class="skill-list">
           <span>Git</span>
           <span>GitHub</span>
           <span>VS Code</span>
+          <span>Arduino</span>
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card fade-up delay-3">
+        <div class="skill-icon">◈</div>
         <h3>Outros</h3>
         <div class="skill-list">
-          <span>Responsividade</span>
-          <span>UI/UX básico</span>
           <span>Unity</span>
+          <span>Raspberry Pi</span>
+          <span>UI/UX básico</span>
+          <span>Responsividade</span>
         </div>
       </div>
 
@@ -200,116 +365,199 @@
 </section>
 
 <section id="certificados">
-  <div class="cert-container">
-
-    <h2>Certificados</h2>
+  <div class="section-inner column">
+    <div class="section-tag fade-up">// certificados</div>
+    <h2 class="fade-up">Formações & Trilha</h2>
 
     <div class="cert-grid">
 
-      <div class="cert-card">
+      <div class="cert-card fade-up">
+        <div class="cert-header">
+          <span class="cert-icon"></span>
+          <span class="cert-platform">Infosoft · Presencial</span>
+        </div>
         <h3>Criação de Games</h3>
-        <p>
-          kkgkkgkgkgkgkgkggk
-        </p>
-        <span>Plataforma: Infosoft | Presencial</span>
-        <a href="assets/certificados/web.pdf" target="_blank">
-          Ver certificado
+        <p>DESCRIÇÃO_DO_CERTIFICADO_AQUI</p>
+        <a href="assets/certificados/web.pdf" target="_blank" class="cert-link">
+          Ver certificado ↗
         </a>
       </div>
 
-      <div class="cert-card">
-        <h3>Gestao de pessoas</h3>
-        <p>
-         rjffkkfkkfkkfkkfkfkfkfkfkfk
-        </p>
-        <span>Plataforma: Cotrijal</span>
-        <a href="assets/certificados/java.pdf" target="_blank">
-          Ver certificado
+      <div class="cert-card fade-up delay-1">
+        <div class="cert-header">
+          <span class="cert-icon"></span>
+          <span class="cert-platform">Cotrijal</span>
+        </div>
+        <h3>Gestão de Pessoas</h3>
+        <p>DESCRIÇÃO_DO_CERTIFICADO_AQUI</p>
+        <a href="assets/certificados/java.pdf" target="_blank" class="cert-link">
+          Ver certificado ↗
         </a>
       </div>
+
+    </div>
+
+   
+    <div class="trilha-wrap fade-up">
+      <div class="trilha-wrap-header">
+        <h3 class="trilha-title">Trilha Acadêmica — Ciência da Computação</h3>
+        <span class="trilha-progress-label">3 de 8 semestres</span>
+      </div>
+
+      <div class="roadmap">
+
+        <div class="roadmap-row">
+         
+          <div class="roadmap-node done">
+            <div class="rnode-sem">1º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check">✓</div>
+              <div class="rnode-content">
+                <span class="rnode-badge done-badge">Concluído</span>
+                <p>SEMESTRE_1</p>
+              </div>
+            </div>
+            <div class="rnode-connector right"></div>
+          </div>
+          
+          <div class="roadmap-node done">
+            <div class="rnode-sem">2º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check">✓</div>
+              <div class="rnode-content">
+                <span class="rnode-badge done-badge">Concluído</span>
+                <p>SEMESTRE_2</p>
+              </div>
+            </div>
+            <div class="rnode-connector right"></div>
+          </div>
+          
+          <div class="roadmap-node current">
+            <div class="rnode-sem">3º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check pulse-ring">●</div>
+              <div class="rnode-content">
+                <span class="rnode-badge current-badge">Em curso</span>
+                <p>SEMESTRE_3</p>
+              </div>
+            </div>
+            <div class="rnode-connector right dim"></div>
+          </div>
+          
+          <div class="roadmap-node future">
+            <div class="rnode-sem">4º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check">○</div>
+              <div class="rnode-content">
+                <span class="rnode-badge future-badge">Futuro</span>
+                <p>SEMESTRE_4</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-turn-right"></div>
+
+        <div class="roadmap-row reverse">
+          
+          <div class="roadmap-node future">
+            <div class="rnode-sem">8º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check">○</div>
+              <div class="rnode-content">
+                <span class="rnode-badge future-badge">Futuro</span>
+                <p>SEMESTRE_8</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="roadmap-node future">
+            <div class="rnode-sem">7º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check">○</div>
+              <div class="rnode-content">
+                <span class="rnode-badge future-badge">Futuro</span>
+                <p>SEMESTRE_7</p>
+              </div>
+            </div>
+            <div class="rnode-connector left dim"></div>
+          </div>
+
+          <div class="roadmap-node future">
+            <div class="rnode-sem">6º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check">○</div>
+              <div class="rnode-content">
+                <span class="rnode-badge future-badge">Futuro</span>
+                <p>SEMESTRE_6</p>
+              </div>
+            </div>
+            <div class="rnode-connector left dim"></div>
+          </div>
+          
+          <div class="roadmap-node future">
+            <div class="rnode-sem">5º Sem</div>
+            <div class="rnode-box">
+              <div class="rnode-check">○</div>
+              <div class="rnode-content">
+                <span class="rnode-badge future-badge">Futuro</span>
+                <p>SEMESTRE_5</p>
+              </div>
+            </div>
+            <div class="rnode-connector left dim"></div>
+          </div>
+        </div>
+
+        <div class="roadmap-goal">
+          <span class="goal-icon"></span>
+        </div>
+
+      </div>
+
+      <p class="trilha-status">
+        <span class="dot-accent"></span> Atualmente no 3º semestre de 8
+      </p>
     </div>
 
   </div>
 </section>
-
-<div class="trilha-container">
-
-  <h3>Trilha Acadêmica</h3>
-
-  <div class="trilha">
-
-    <div class="trilha-item ativo">
-      <span>1</span>
-      <p>ggffgfgfg</p>
-    </div>
-
-    <div class="trilha-item ativo">
-      <span>2</span>
-      <p>vdvdvdvvdv</p>
-    </div>
-
-    <div class="trilha-item ativo">
-      <span>3</span>
-      <p>ffggfgfgE</p>
-    </div>
-
-    <div class="trilha-item">
-      <span>4</span>
-      <p>gdggdgdfgdf</p>
-    </div>
-
-    <div class="trilha-item">
-      <span>5</span>
-      <p>vcbbbbdggdf</p>
-    </div>
-
-    <div class="trilha-item">
-      <span>6</span>
-      <p>gfdhdfgdfg</p>
-    </div>
-
-    <div class="trilha-item">
-      <span>7</span>
-      <p>gfdgdfgdfg</p>
-    </div>
-
-    <div class="trilha-item">
-      <span>8</span>
-      <p>gfgfgfgf </p>
-    </div>
-
-  </div>
-
-  <p class="trilha-status">Atualmente no 3º semestre de 8</p>
-
-</div>
 
 <section id="contato">
-  <div class="contato-container">
+  <div class="section-inner column contato-inner">
 
-    <h2>Contato</h2>
-
-    <p class="contato-texto">
-      Estou aberto a oportunidades de estágio e projetos.  
-      Entre em contato comigo através dos canais abaixo.
+    <div class="section-tag fade-up">// contato</div>
+    <h2 class="fade-up">Vamos conversar?</h2>
+    <p class="contato-desc fade-up">
+      Estou aberto a oportunidades de estágio e projetos.
+      Escolha o canal mais conveniente para você.
     </p>
 
-    <div class="contato-links">
-
+    <div class="contato-links fade-up">
       <a href="mailto:augustowolfartaltmayer30@gmail.com" class="contato-item">
-        📧 Email
+        <span class="contato-icon">✉</span>
+        <span class="contato-label">Email</span>
+        <span class="contato-value">augustowolfartaltmayer30@gmail.com</span>
       </a>
       <a href="https://www.linkedin.com/in/augustowolfartaltmayer/" target="_blank" class="contato-item">
-        💼 LinkedIn
+        <span class="contato-icon">in</span>
+        <span class="contato-label">LinkedIn</span>
+        <span class="contato-value">augustowolfartaltmayer</span>
       </a>
       <a href="https://github.com/awaltmayer" target="_blank" class="contato-item">
-        💻 GitHub
+        <span class="contato-icon">⌥</span>
+        <span class="contato-label">GitHub</span>
+        <span class="contato-value">awaltmayer</span>
       </a>
     </div>
+
   </div>
 </section>
 
-</section>
-  <script src="assets/js/main.js"></script>
+<footer>
+  <span class="footer-logo">[aw.dev]</span>
+  <span class="footer-copy">© 2025 Augusto Wolfart Altmayer</span>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
