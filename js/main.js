@@ -1,8 +1,3 @@
-/* ─────────────────────────────────────────
-   main.js — awaltmayer.dev
-───────────────────────────────────────── */
-
-// ── Tema: escuro (verde/preto) ↔ claro (verde/branco) ──────────
 const themeToggle = document.getElementById('themeToggle');
 const root        = document.documentElement;
 
@@ -15,14 +10,12 @@ function setTheme(t) {
   localStorage.setItem('aw-theme', t);
 }
 
-// Aplicar tema salvo ao carregar
 setTheme(getTheme());
 
 themeToggle.addEventListener('click', () => {
   setTheme(getTheme() === 'dark' ? 'light' : 'dark');
 });
 
-// ── Navbar: scroll state + active section ──────────────────────
 const navbar  = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -44,7 +37,6 @@ function highlightNav() {
   });
 }
 
-// ── Hamburger menu ──────────────────────────────────────────────
 const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -53,7 +45,6 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('open');
 });
 
-// Close mobile menu on link click
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -61,7 +52,6 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
-// ── Scroll animations (Intersection Observer) ──────────────────
 const animEls = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
 
 const observer = new IntersectionObserver((entries) => {
@@ -75,7 +65,6 @@ const observer = new IntersectionObserver((entries) => {
 
 animEls.forEach(el => observer.observe(el));
 
-// ── Carousel de projetos ───────────────────────────────────────
 const track      = document.getElementById('carouselTrack');
 const prevBtn    = document.getElementById('prevBtn');
 const nextBtn    = document.getElementById('nextBtn');
@@ -86,10 +75,8 @@ if (track) {
   const total    = slides.length;
   let current    = 0;
 
-  // Preencher total nos slides
   track.querySelectorAll('.proj-total').forEach(el => el.textContent = total);
 
-  // Criar dots
   slides.forEach((_, i) => {
     const d = document.createElement('button');
     d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -120,7 +107,6 @@ if (track) {
   });
 }
 
-// ── Smooth anchor offset (fixed nav) ───────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
     const target = document.querySelector(anchor.getAttribute('href'));
