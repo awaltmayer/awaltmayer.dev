@@ -456,3 +456,46 @@ section {
   font-size: 13px;
   color: var(--soft);
 }
+#contato {
+  padding: 100px 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.contato-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.contato-container h2 {
+  margin-bottom: 1rem;
+}
+
+.contato-texto {
+  color: var(--soft);
+  margin-bottom: 2rem;
+}
+
+/* LINKS */
+.contato-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contato-item {
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.contato-item:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
