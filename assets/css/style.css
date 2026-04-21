@@ -42,7 +42,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Syne', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.7;
   overflow-x: hidden;
 }
@@ -112,7 +112,7 @@ img { display: block; max-width: 100%; }
 }
 
 .nav-logo {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -213,7 +213,7 @@ section {
 }
 
 .section-tag {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--accent);
   letter-spacing: 0.05em;
@@ -221,10 +221,11 @@ section {
 }
 
 h2 {
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
   margin-bottom: 2rem;
 }
 
@@ -246,16 +247,17 @@ h2 {
 
 
 .hero-text h1 {
-  font-size: clamp(40px, 7vw, 76px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(64px, 10vw, 110px);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 0.92;
   margin-bottom: 1.5rem;
 }
 .hero-name-accent { color: var(--accent); }
 
 .hero-desc {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   color: var(--soft);
   line-height: 1.8;
@@ -295,36 +297,9 @@ h2 {
 
 
 .badge-num { display: block; font-size: 22px; font-weight: 800; line-height: 1; }
-.badge-text { font-family: 'DM Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+.badge-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
 
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.hero-scroll-hint span {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  writing-mode: vertical-lr;
-}
-.scroll-line {
-  width: 1px;
-  height: 50px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
-  animation: scroll-hint 2s ease-in-out infinite;
-}
-@keyframes scroll-hint {
-  0%   { transform: scaleY(0); transform-origin: top; }
-  50%  { transform: scaleY(1); transform-origin: top; }
-  51%  { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
-}
+/* Scroll hint removido */
 
 #sobre { background: var(--bg2); }
 
@@ -339,7 +314,7 @@ h2 {
   filter: grayscale(30%);
 }
 .sobre-img-label {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--muted);
   text-align: center;
@@ -377,7 +352,7 @@ h2 {
   line-height: 1;
 }
 .stat-label {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--muted);
   margin-top: 0.3rem;
@@ -430,7 +405,7 @@ h2 {
   margin-bottom: 0.5rem;
 }
 .timeline-date {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--muted);
 }
@@ -444,7 +419,8 @@ h2 {
 }
 
 .timeline-content h3 {
-  font-size: 18px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
@@ -461,11 +437,11 @@ h2 {
   align-items: center;
 }
 .timeline-company-logo img {
-  height: 32px;
+  height: 44px;
   width: auto;
   object-fit: contain;
 }
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   padding: 3px 10px;
   border: 1px solid var(--border);
@@ -560,13 +536,16 @@ h2 {
 .proj-slide-img {
   position: relative;
   overflow: hidden;
+  background: var(--bg);
+  min-height: 380px;
 }
 .proj-slide-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.6s;
+  padding: 1rem;
 }
 .proj-slide:hover .proj-slide-img img { transform: scale(1.04); }
 
@@ -574,7 +553,7 @@ h2 {
   position: absolute;
   bottom: 12px;
   left: 14px;
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: rgba(255,255,255,0.6);
   background: rgba(0,0,0,0.45);
@@ -591,7 +570,7 @@ h2 {
   min-height: 300px;
 }
 .placeholder-icon {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 48px;
   color: var(--muted);
 }
@@ -604,14 +583,15 @@ h2 {
   gap: 0.75rem;
 }
 .proj-slide-tag {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 .proj-slide-body h3 {
-  font-size: 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -626,7 +606,7 @@ h2 {
 }
 .proj-slide-links { margin-top: 0.5rem; }
 .proj-btn-link {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   font-weight: 500;
   color: var(--accent);
@@ -661,10 +641,14 @@ h2 {
 }
 
 .skill-icon {
-  font-family: 'DM Mono', monospace;
-  font-size: 20px;
+  width: 36px;
+  height: 36px;
   color: var(--accent);
   margin-bottom: 1rem;
+}
+.skill-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .skill-card h3 {
@@ -682,7 +666,7 @@ h2 {
   gap: 0.4rem;
 }
 .skill-list span {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   color: var(--text);
   padding: 0.35rem 0;
@@ -718,12 +702,29 @@ h2 {
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
-.cert-icon {
-  color: var(--accent);
-  font-size: 18px;
+.cert-logo-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  height: 34px;
+}
+.cert-logo-text {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+.infosoft-logo { color: var(--accent); }
+.cotrijal-wrap { padding: 3px 8px; }
+.cert-logo-img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
 }
 .cert-platform {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--muted);
 }
@@ -744,7 +745,7 @@ h2 {
 }
 
 .cert-link {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--accent);
   transition: opacity 0.2s;
@@ -772,7 +773,7 @@ h2 {
   letter-spacing: -0.01em;
 }
 .trilha-progress-label {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--accent);
   background: rgba(var(--accent-rgb, 224,48,48), 0.08);
@@ -832,7 +833,7 @@ h2 {
 .rnode-connector.dim   { background: var(--muted); }
 
 .rnode-sem {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
   color: var(--muted);
   text-transform: uppercase;
@@ -854,6 +855,8 @@ h2 {
   position: relative;
   z-index: 1;
   transition: border-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  color: inherit;
 }
 .roadmap-node.done .rnode-box  { border-color: var(--borderh); }
 .roadmap-node.current .rnode-box {
@@ -861,6 +864,28 @@ h2 {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
 }
 .rnode-box:hover { transform: translateY(-3px); }
+
+.rnode-clickable:hover {
+  border-color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 5%, var(--bg2));
+  cursor: pointer;
+}
+.rnode-clickable:hover .rnode-cert-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rnode-cert-hint {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  margin-top: 0.35rem;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.03em;
+}
 
 .rnode-check {
   font-size: 13px;
@@ -900,7 +925,7 @@ h2 {
 .rnode-content { flex: 1; }
 
 .rnode-badge {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -914,7 +939,7 @@ h2 {
 .future-badge  { background: var(--bg3); color: var(--muted); }
 
 .rnode-content p {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--soft);
   line-height: 1.4;
@@ -926,7 +951,7 @@ h2 {
 .roadmap-row.reverse .roadmap-node { direction: ltr; }
 
 .trilha-status {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--soft);
   display: flex;
@@ -955,7 +980,7 @@ h2 {
 }
 
 .contato-desc {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   color: var(--soft);
   max-width: 480px;
@@ -992,9 +1017,17 @@ h2 {
   transform: translateY(-4px);
 }
 .contato-icon {
-  font-size: 24px;
+  width: 28px;
+  height: 28px;
   color: var(--accent);
   margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contato-icon svg {
+  width: 100%;
+  height: 100%;
 }
 .contato-label {
   font-size: 11px;
@@ -1004,7 +1037,7 @@ h2 {
   color: var(--text);
 }
 .contato-value {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--muted);
   word-break: break-all;
@@ -1018,12 +1051,12 @@ footer {
   align-items: center;
 }
 .footer-logo {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   color: var(--muted);
 }
 .footer-copy {
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--muted);
 }
@@ -1086,8 +1119,8 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
-  h2 { font-size: 24px; }
-  .hero-text h1 { font-size: clamp(36px, 10vw, 52px); }
+  h2 { font-size: 28px; }
+  .hero-text h1 { font-size: clamp(60px, 14vw, 80px); }
 
   section { padding: 80px 1.25rem; }
 
