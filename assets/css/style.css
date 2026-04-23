@@ -441,6 +441,7 @@ h2 {
   width: auto;
   object-fit: contain;
 }
+.timeline-tags span {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   padding: 3px 10px;
@@ -1083,16 +1084,22 @@ footer {
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 
+/* ─────────────────────────────────────────
+   RESPONSIVO
+───────────────────────────────────────── */
+
+/* ── Tablet grande ── */
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr 240px; gap: 2.5rem; }
   .hero-image-frame { max-width: 240px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Tablet ── */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
   .hero-image-wrap { display: none; }
-  .hero-buttons { justify-content: center; }
+  .hero-desc { margin: 0 auto 0; }
   .hero-scroll-hint { display: none; }
 
   .section-inner { flex-direction: column; }
@@ -1101,12 +1108,11 @@ footer {
   .sobre-texto { text-align: left; }
 
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-
   .cert-grid { grid-template-columns: 1fr; }
 
   .proj-slide { grid-template-columns: 1fr; }
   .proj-slide-img { min-height: 200px; }
-  .proj-slide-img img { height: 240px; object-fit: cover; }
+  .proj-slide-img img { height: 240px; object-fit: contain; }
   .proj-slide-body { padding: 1.5rem; }
 
   .roadmap-row { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
@@ -1115,37 +1121,94 @@ footer {
   .rnode-connector { display: none; }
 }
 
+/* ── Mobile ── */
 @media (max-width: 768px) {
+  /* Nav */
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
+  /* Tipografia */
   h2 { font-size: 28px; }
   .hero-text h1 { font-size: clamp(60px, 14vw, 80px); }
 
-  section { padding: 80px 1.25rem; }
+  /* Espaçamento */
+  section { padding: 72px 1.25rem; }
 
-  .sobre-stats { flex-direction: column; gap: 1.25rem; padding-top: 1.5rem; }
+  /* Hero centralizado */
+  .hero-grid { text-align: center; }
+  .hero-desc { text-align: center; }
+  .sobre-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+    justify-content: flex-start;
+  }
   .stat-num { font-size: 24px; }
 
+  /* Skills 2 colunas */
   .skills-grid { grid-template-columns: 1fr 1fr; }
 
+  /* Projetos */
   .proj-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .proj-slide-body h3 { font-size: 20px; }
+  .proj-slide-body p { font-size: 13px; }
 
+  /* Roadmap 1 coluna */
   .roadmap-row { grid-template-columns: 1fr; }
   .roadmap-row.reverse { direction: ltr; }
   .trilha-wrap { padding: 1.25rem; }
   .trilha-wrap-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .trilha-progress-label { font-size: 10px; }
 
-  .contato-links { flex-direction: column; }
-  .contato-item { width: 100%; }
+  /* Contato — centralizado em coluna */
+  .section-inner.column.contato-inner {
+    align-items: center;
+    text-align: center;
+  }
+  .section-inner.column.contato-inner .section-tag {
+    align-self: center;
+    text-align: center;
+  }
+  .section-inner.column.contato-inner h2 {
+    text-align: center;
+  }
+  .contato-desc { text-align: center; margin-bottom: 2rem; }
+  .contato-links {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 400px;
+    gap: 0.75rem;
+  }
+  .contato-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+  .contato-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .contato-label { font-size: 13px; }
 
-
+  /* Footer */
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
 
+/* ── Mobile pequeno ── */
 @media (max-width: 480px) {
-  .skills-grid { grid-template-columns: 1fr; }
+  section { padding: 64px 1rem; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
   .cert-grid { grid-template-columns: 1fr; }
-  .roadmap-goal { justify-content: flex-start; }
+  .sobre-stats { gap: 1rem; }
+  .proj-slide-img { min-height: 160px; }
+  .proj-slide-img img { height: 180px; }
+  .rnode-box { padding: 0.7rem 0.75rem; }
+  .rnode-content p { font-size: 10px; }
+  .trilha-title { font-size: 13px; }
 }
