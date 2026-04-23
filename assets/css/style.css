@@ -301,6 +301,46 @@ h2 {
 
 /* Scroll hint removido */
 
+/* ─────────────────────────────────────────
+   DADOS PESSOAIS
+───────────────────────────────────────── */
+#dados { padding: 60px 2rem; }
+
+.dados-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dado-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.5rem 2rem;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.dado-item:last-child { border-right: none; }
+.dado-item:hover { background: var(--bg2); }
+
+.dado-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.dado-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
 #sobre { background: var(--bg2); }
 
 .sobre-img {
@@ -713,9 +753,10 @@ h2 {
   height: 34px;
 }
 .cert-logo-text {
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
 }
 .infosoft-logo { color: var(--accent); }
 .cotrijal-wrap { padding: 3px 8px; }
@@ -1102,6 +1143,12 @@ footer {
   .hero-desc { margin: 0 auto 0; }
   .hero-scroll-hint { display: none; }
 
+  .dados-grid { grid-template-columns: repeat(2, 1fr); }
+  .dado-item:nth-child(2) { border-right: none; }
+  .dado-item:nth-child(3) { border-right: none; }
+  .dado-item:nth-child(1),
+  .dado-item:nth-child(2) { border-bottom: 1px solid var(--border); }
+
   .section-inner { flex-direction: column; }
   .sobre-img { order: -1; width: 100%; display: flex; flex-direction: column; align-items: center; }
   .sobre-img img { width: 100%; max-width: 300px; }
@@ -1109,6 +1156,10 @@ footer {
 
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .cert-grid { grid-template-columns: 1fr; }
+  .dados-grid { grid-template-columns: repeat(2, 1fr); }
+  .dado-item:nth-child(2) { border-right: none; }
+  .dado-item:nth-child(1),
+  .dado-item:nth-child(2) { border-bottom: 1px solid var(--border); }
 
   .proj-slide { grid-template-columns: 1fr; }
   .proj-slide-img { min-height: 200px; }
