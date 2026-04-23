@@ -909,7 +909,7 @@ h2 {
 
 .rnode-clickable:hover {
   border-color: var(--accent) !important;
-  background: color-mix(in srgb, var(--accent) 5%, var(--bg2));
+  background: color-mix(in srgb, var(--accent) 3%, var(--bg2));
   cursor: pointer;
 }
 .rnode-clickable:hover .rnode-cert-hint {
@@ -1057,6 +1057,13 @@ h2 {
 .contato-item:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
+}
+.contato-curriculo {
+  border-color: var(--borderh);
+  background: color-mix(in srgb, var(--accent) 3%, var(--bg2));
+}
+.contato-curriculo:hover {
+  background: color-mix(in srgb, var(--accent) 3%, var(--bg2));
 }
 .contato-icon {
   width: 28px;
